@@ -26,7 +26,7 @@
 
         /* =========================
            LANDING SCREEN
-        ========================== */
+        ========================= */
 
         .landing {
             min-height: 100vh;
@@ -81,6 +81,8 @@
             transform: translateY(-4px);
         }
 
+        /* Anderson Education metallic blue */
+
         .tutor-choice {
             background: #061a3a;
             color: white;
@@ -93,9 +95,13 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
+        .choice span {
+            display: none;
+        }
+
         /* =========================
            MAIN CONTENT
-        ========================== */
+        ========================= */
 
         .side {
             display: none;
@@ -142,7 +148,7 @@
 
         /* =========================
            HERO
-        ========================== */
+        ========================= */
 
         .hero {
             text-align: center;
@@ -175,7 +181,7 @@
 
         /* =========================
            QUOTE
-        ========================== */
+        ========================= */
 
         .quote {
             background: #061a3a;
@@ -200,7 +206,7 @@
 
         /* =========================
            MISSION
-        ========================== */
+        ========================= */
 
         .mission {
             text-align: center;
@@ -222,7 +228,7 @@
 
         /* =========================
            TUTOR INFO
-        ========================== */
+        ========================= */
 
         .tutor-info {
             display: grid;
@@ -262,7 +268,7 @@
 
         /* =========================
            CTA
-        ========================== */
+        ========================= */
 
         .cta {
             text-align: center;
@@ -278,21 +284,30 @@
             font-size: 17px;
             font-weight: 700;
             cursor: pointer;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
         }
 
+        /* Both major CTA buttons now use Anderson Education blue */
+
         .tutor-button {
             background: #061a3a;
             color: white;
+            box-shadow: 0 8px 25px rgba(6, 26, 58, 0.18);
         }
 
         .student-button {
-            background: #2f8f45;
+            background: #061a3a;
             color: white;
+            box-shadow: 0 8px 25px rgba(6, 26, 58, 0.18);
+        }
+
+        .tutor-button:hover,
+        .student-button:hover {
+            background: #0b2b5c;
         }
 
         .cta-note {
@@ -303,7 +318,7 @@
 
         /* =========================
            FOOTER
-        ========================== */
+        ========================= */
 
         footer {
             text-align: center;
@@ -314,7 +329,7 @@
 
         /* =========================
            QR MODAL
-        ========================== */
+        ========================= */
 
         .qr-modal {
             display: none;
@@ -334,7 +349,7 @@
         .qr-box {
             background: white;
             border-radius: 22px;
-            padding: 30px;
+            padding: 25px;
             max-width: 700px;
             width: 100%;
             max-height: 95vh;
@@ -351,54 +366,14 @@
         .qr-box p {
             color: #666;
             margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .qr-image-link {
-            display: block;
-            width: 100%;
-            text-decoration: none;
-            cursor: pointer;
         }
 
         .qr-image {
             width: min(600px, 90vw);
-            max-height: 65vh;
+            max-height: 70vh;
             object-fit: contain;
             display: block;
             margin: auto;
-            border-radius: 8px;
-            transition: transform 0.2s ease;
-        }
-
-        .qr-image:hover {
-            transform: scale(1.01);
-        }
-
-        .qr-save-note {
-            margin-top: 15px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            color: #777;
-        }
-
-        .download-qr {
-            display: inline-block;
-            background: #061a3a;
-            color: white;
-            text-decoration: none;
-            border: none;
-            border-radius: 50px;
-            padding: 14px 28px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: transform 0.2s ease, background 0.2s ease;
-        }
-
-        .download-qr:hover {
-            transform: translateY(-2px);
-            background: #0b2a59;
         }
 
         .close-qr {
@@ -414,13 +389,26 @@
             cursor: pointer;
         }
 
-        .close-qr:hover {
-            background: #ddd;
+        .save-qr {
+            display: inline-block;
+            margin-top: 20px;
+            background: #061a3a;
+            color: white;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 700;
+            transition: background 0.2s ease;
+        }
+
+        .save-qr:hover {
+            background: #0b2b5c;
         }
 
         /* =========================
            MOBILE
-        ========================== */
+        ========================= */
 
         @media (max-width: 650px) {
 
@@ -444,7 +432,7 @@
 
             .choice {
                 padding: 25px 20px;
-                font-size: 24px;
+                font-size: 22px;
             }
 
             .topbar {
@@ -489,17 +477,11 @@
             }
 
             .qr-box {
-                padding: 25px 18px;
+                padding: 20px 15px;
             }
 
             .qr-image {
-                width: min(90vw, 520px);
-                max-height: 60vh;
-            }
-
-            .download-qr {
                 width: 100%;
-                max-width: 320px;
             }
         }
     </style>
@@ -710,6 +692,7 @@
                 <a
                     href="https://forms.gle/QFv65nujNR1P9Wjh9"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="cta-button tutor-button"
                 >
                     Become an Educator
@@ -849,7 +832,6 @@
                 ×
             </button>
 
-
             <h2>
                 Become a Student
             </h2>
@@ -858,38 +840,16 @@
                 Scan this QR code with WeChat to add Anderson Education.
             </p>
 
-
-            <!--
-                Clicking the QR code downloads it on supported computers.
-                On mobile, users can press and hold the image to save it.
-            -->
-
-            <a
-                href="wechat-qr.jpg"
-                download="Anderson-Education-WeChat-QR.jpg"
-                class="qr-image-link"
-                title="Click to download the QR code"
+            <img
+                src="wechat-qr.jpg"
+                alt="Anderson Education WeChat QR Code"
+                class="qr-image"
             >
 
-                <img
-                    src="wechat-qr.jpg"
-                    alt="Anderson Education WeChat QR Code"
-                    class="qr-image"
-                >
-
-            </a>
-
-
-            <p class="qr-save-note">
-                On your phone, press and hold the QR code to save it.
-                On a computer, click the button below.
-            </p>
-
-
             <a
                 href="wechat-qr.jpg"
                 download="Anderson-Education-WeChat-QR.jpg"
-                class="download-qr"
+                class="save-qr"
             >
                 Save QR Code
             </a>
@@ -922,7 +882,6 @@
                 top: 0,
                 behavior: "instant"
             });
-
         }
 
 
@@ -941,25 +900,20 @@
                 top: 0,
                 behavior: "instant"
             });
-
         }
 
 
         function openQR() {
 
-            document
-                .getElementById("qrModal")
+            document.getElementById("qrModal")
                 .classList.add("active");
-
         }
 
 
         function closeQR() {
 
-            document
-                .getElementById("qrModal")
+            document.getElementById("qrModal")
                 .classList.remove("active");
-
         }
 
 
