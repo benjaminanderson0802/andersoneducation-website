@@ -1,838 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Anderson Education helps educators earn more through flexible online tutoring opportunities.">
-  <meta name="theme-color" content="#102A43">
-
-  <meta property="og:title" content="Anderson Education | Better Opportunities for Educators">
-  <meta property="og:description" content="Good educators deserve better opportunities. Teach online, earn extra income, and work on a schedule that fits your life.">
-
-  <title>Anderson Education | Better Opportunities for Educators</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --navy: #102A43;
-      --blue: #1F5F8B;
-      --light-blue: #EAF3F8;
-      --cream: #F8F7F3;
-      --white: #FFFFFF;
-      --text: #243B53;
-      --muted: #627D98;
-      --border: #D9E2EC;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1100px, 92%);
-      margin: 0 auto;
-    }
-
-    /* HEADER */
-
-    header {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav {
-      height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      background: var(--navy);
-      color: white;
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
-
-    .brand-text strong {
-      display: block;
-      font-size: 15px;
-      letter-spacing: 1.4px;
-      color: var(--navy);
-    }
-
-    .brand-text span {
-      display: block;
-      font-size: 9px;
-      letter-spacing: 1.3px;
-      color: var(--muted);
-      margin-top: 1px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .nav-links a:hover {
-      color: var(--blue);
-    }
-
-    .nav-button {
-      background: var(--navy);
-      color: white !important;
-      padding: 10px 18px;
-      border-radius: 7px;
-    }
-
-    /* HERO */
-
-    .hero {
-      background: var(--white);
-      padding: 95px 0 85px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-content {
-      max-width: 820px;
-    }
-
-    .eyebrow {
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      color: var(--blue);
-      margin-bottom: 18px;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      color: var(--navy);
-      font-size: clamp(44px, 7vw, 76px);
-      line-height: 1.03;
-      letter-spacing: -3px;
-      max-width: 850px;
-      margin-bottom: 28px;
-    }
-
-    .hero-text {
-      font-size: 20px;
-      line-height: 1.65;
-      color: var(--muted);
-      max-width: 700px;
-      margin-bottom: 35px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 14px 23px;
-      border-radius: 7px;
-      font-weight: 700;
-      font-size: 15px;
-      transition: 0.2s ease;
-    }
-
-    .button-primary {
-      background: var(--navy);
-      color: white;
-    }
-
-    .button-primary:hover {
-      background: var(--blue);
-      transform: translateY(-1px);
-    }
-
-    /* PAY SECTION */
-
-    .pay-section {
-      padding: 65px 0;
-      background: var(--light-blue);
-    }
-
-    .pay-intro {
-      max-width: 650px;
-      margin-bottom: 35px;
-    }
-
-    h2 {
-      color: var(--navy);
-      font-size: clamp(30px, 4vw, 45px);
-      line-height: 1.15;
-      letter-spacing: -1.5px;
-      margin-bottom: 15px;
-    }
-
-    .pay-intro p {
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .pay-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .pay-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 28px;
-    }
-
-    .pay-card.highlight {
-      background: var(--navy);
-      color: white;
-      border-color: var(--navy);
-    }
-
-    .pay-card-label {
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1.3px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .pay-card.highlight .pay-card-label {
-      color: #BFD7E5;
-    }
-
-    .pay-number {
-      font-size: 34px;
-      font-weight: 800;
-      letter-spacing: -1px;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-
-    .pay-card.highlight .pay-number {
-      color: white;
-    }
-
-    .pay-description {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .pay-card.highlight .pay-description {
-      color: #D9E8F0;
-    }
-
-    /* MISSION */
-
-    .mission {
-      padding: 75px 0;
-      background: white;
-    }
-
-    .mission-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .mission-copy p {
-      color: var(--muted);
-      font-size: 17px;
-      margin-bottom: 18px;
-    }
-
-    .mission-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .mission-item {
-      padding: 17px 20px;
-      border-left: 3px solid var(--blue);
-      background: var(--cream);
-      font-weight: 650;
-      color: var(--navy);
-    }
-
-    /* APPLICATION */
-
-    .application {
-      padding: 80px 0;
-      background: var(--navy);
-      color: white;
-    }
-
-    .application-grid {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 65px;
-      align-items: start;
-    }
-
-    .application h2 {
-      color: white;
-    }
-
-    .application-copy p {
-      color: #C5D5E0;
-      font-size: 17px;
-      margin-bottom: 25px;
-    }
-
-    .application-copy strong {
-      color: white;
-    }
-
-    .application-form {
-      background: white;
-      color: var(--text);
-      border-radius: 12px;
-      padding: 30px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 17px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .form-group.full {
-      grid-column: 1 / -1;
-    }
-
-    label {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--navy);
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 11px 12px;
-      font-family: inherit;
-      font-size: 14px;
-      color: var(--text);
-      background: white;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 105px;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      outline: none;
-      border-color: var(--blue);
-      box-shadow: 0 0 0 2px rgba(31, 95, 139, 0.1);
-    }
-
-    .submit-button {
-      grid-column: 1 / -1;
-      border: none;
-      cursor: pointer;
-      background: var(--navy);
-      color: white;
-      padding: 14px;
-      border-radius: 7px;
-      font-weight: 700;
-      font-size: 15px;
-    }
-
-    .submit-button:hover {
-      background: var(--blue);
-    }
-
-    .form-note {
-      grid-column: 1 / -1;
-      font-size: 12px;
-      color: var(--muted);
-      text-align: center;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #081C2C;
-      color: #B7C7D3;
-      padding: 30px 0;
-    }
-
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .footer-brand strong {
-      color: white;
-      font-size: 14px;
-      letter-spacing: 1px;
-    }
-
-    .footer-brand span {
-      font-size: 11px;
-    }
-
-    footer p {
-      font-size: 12px;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 800px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding: 70px 0 65px;
-      }
-
-      h1 {
-        letter-spacing: -2px;
-      }
-
-      .pay-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .mission-grid,
-      .application-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .application-form {
-        grid-template-columns: 1fr;
-      }
-
-      .form-group.full,
-      .submit-button,
-      .form-note {
-        grid-column: auto;
-      }
-
-      .footer-content {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anderson Education | Better Opportunities for Educators</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            color: #1f2937;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+
+        header {
+            padding: 26px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: #111827;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 85px 20px 70px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 68px);
+            line-height: 1.05;
+            letter-spacing: -2.5px;
+            color: #111827;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: 0 auto 32px;
+            font-size: 20px;
+            color: #4b5563;
+        }
+
+        .button {
+            display: inline-block;
+            background: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 26px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background 0.2s ease;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+
+        /* MISSION */
+
+        .mission {
+            background: #f8fafc;
+            padding: 60px 20px;
+        }
+
+        .mission h2 {
+            font-size: 34px;
+            line-height: 1.2;
+            color: #111827;
+            margin-bottom: 18px;
+        }
+
+        .mission p {
+            font-size: 18px;
+            color: #4b5563;
+            max-width: 700px;
+        }
+
+        .mission p + p {
+            margin-top: 20px;
+        }
+
+        /* PAY */
+
+        .pay {
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .pay h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .pay-number {
+            font-size: 52px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #2563eb;
+            margin: 12px 0;
+        }
+
+        .pay p {
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 17px;
+        }
+
+        /* WHO WE'RE LOOKING FOR */
+
+        .who {
+            padding: 15px 20px 70px;
+        }
+
+        .who h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .who p {
+            font-size: 18px;
+            color: #4b5563;
+            max-width: 700px;
+            margin-bottom: 15px;
+        }
+
+        /* APPLICATION */
+
+        .application {
+            background: #f8fafc;
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .application h2 {
+            font-size: 36px;
+            line-height: 1.2;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .application-intro {
+            color: #6b7280;
+            margin: 0 auto 28px;
+            font-size: 17px;
+            max-width: 600px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .hero {
+                padding: 60px 20px 55px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .mission,
+            .pay,
+            .application {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .mission h2,
+            .who h2,
+            .pay h2,
+            .application h2 {
+                font-size: 29px;
+            }
+
+            .pay-number {
+                font-size: 43px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+    <!-- HEADER -->
 
-  <header>
-    <div class="container nav">
+    <header>
+        <div class="container">
+            <div class="logo">ANDERSON EDUCATION</div>
+        </div>
+    </header>
 
-      <a href="#" class="brand">
-        <span class="brand-mark">AE</span>
-
-        <span class="brand-text">
-          <strong>ANDERSON EDUCATION</strong>
-          <span>BETTER OPPORTUNITIES FOR EDUCATORS</span>
-        </span>
-      </a>
-
-      <nav class="nav-links">
-        <a href="#mission">Our Mission</a>
-        <a href="#application" class="nav-button">Teach With Us</a>
-      </nav>
-
-    </div>
-  </header>
-
-
-  <main>
 
     <!-- HERO -->
 
     <section class="hero">
-      <div class="container">
+        <div class="container">
 
-        <div class="hero-content">
+            <h1>
+                Let's be honest.<br>
+                <span>Educators deserve better.</span>
+            </h1>
 
-          <p class="eyebrow">Anderson Education LLC</p>
+            <p>
+                Anderson Education connects great educators with
+                flexible online tutoring work that respects their
+                experience, time, and value.
+            </p>
 
-          <h1>Let's be honest. Our educators deserve better.</h1>
-
-          <p class="hero-text">
-            Teaching is valuable work. But too many educators are asked to give more of their time while earning less than their experience is worth.
-          </p>
-
-          <p class="hero-text">
-            Anderson Education is building a better option: flexible online tutoring for educators who want to earn additional income while continuing to do what they already do best.
-          </p>
-
-          <a href="#application" class="button button-primary">
-            Teach With Anderson Education →
-          </a>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- PAY -->
-
-    <section class="pay-section">
-
-      <div class="container">
-
-        <div class="pay-intro">
-
-          <p class="eyebrow">A BETTER OPPORTUNITY</p>
-
-          <h2>Your experience is worth something.</h2>
-
-          <p>
-            We believe educators should have access to flexible work that respects their experience, time, and ability to teach.
-          </p>
+            <a
+                href="https://forms.gle/QFv65nujNR1P9Wjh9"
+                class="button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Apply to Tutor
+            </a>
 
         </div>
-
-        <div class="pay-grid">
-
-          <div class="pay-card">
-
-            <div class="pay-card-label">
-              Median Teacher Pay
-            </div>
-
-            <div class="pay-number">
-              $61,000
-            </div>
-
-            <div class="pay-description">
-              Median annual pay for teachers
-            </div>
-
-          </div>
-
-
-          <div class="pay-card">
-
-            <div class="pay-card-label">
-              Median Individual Income
-            </div>
-
-            <div class="pay-number">
-              $42,000
-            </div>
-
-            <div class="pay-description">
-              Median annual individual income
-            </div>
-
-          </div>
-
-
-          <div class="pay-card highlight">
-
-            <div class="pay-card-label">
-              Anderson Education
-            </div>
-
-            <div class="pay-number">
-              $24–$30/hr
-            </div>
-
-            <div class="pay-description">
-              Flexible online tutoring opportunities
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
     </section>
 
 
     <!-- MISSION -->
 
-    <section id="mission" class="mission">
+    <section class="mission">
+        <div class="container">
 
-      <div class="container">
-
-        <div class="mission-grid">
-
-          <div>
-
-            <p class="eyebrow">OUR MISSION</p>
-
-            <h2>Teaching should work for you, too.</h2>
-
-          </div>
-
-
-          <div class="mission-copy">
+            <h2>Teaching should be worth more.</h2>
 
             <p>
-              Anderson Education exists to create better opportunities for educators.
+                Educators spend years building skills that are incredibly
+                valuable, yet many are asked to work for less than their
+                experience is worth.
             </p>
 
             <p>
-              Whether you're currently teaching, recently retired, substituting, or simply looking for a flexible way to earn additional income, we want your experience to have more value.
+                Substitute teaching and other part-time education work
+                often do not provide the flexibility or income educators
+                need.
             </p>
 
-            <div class="mission-list">
-
-              <div class="mission-item">
-                Current educators looking for extra income
-              </div>
-
-              <div class="mission-item">
-                Retired educators who still want to teach
-              </div>
-
-              <div class="mission-item">
-                Substitute teachers looking for better opportunities
-              </div>
-
-              <div class="mission-item">
-                Experienced educators who want flexible remote work
-              </div>
-
-            </div>
-
-          </div>
+            <p>
+                We are building a different option. Anderson Education
+                gives qualified educators the opportunity to earn
+                additional income through one-on-one online English
+                tutoring.
+            </p>
 
         </div>
+    </section>
 
-      </div>
 
+    <!-- PAY -->
+
+    <section class="pay">
+        <div class="container">
+
+            <h2>Earn $24–$30 per hour.</h2>
+
+            <div class="pay-number">$24–$30/hr</div>
+
+            <p>
+                Flexible online tutoring designed to fit around your
+                existing work, retirement, family, or other commitments.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- WHO WE'RE LOOKING FOR -->
+
+    <section class="who">
+        <div class="container">
+
+            <h2>Who we're looking for</h2>
+
+            <p>
+                We're looking for educators who enjoy working with
+                students and want a flexible way to earn additional income.
+            </p>
+
+            <p>
+                Current teachers, retired educators, substitute teachers,
+                education students, and experienced professionals with
+                strong English communication skills are all encouraged
+                to apply.
+            </p>
+
+            <p>
+                You don't need to leave your current job. You don't need
+                to work full-time. We simply want great people who care
+                about helping students learn.
+            </p>
+
+        </div>
     </section>
 
 
     <!-- APPLICATION -->
 
-    <section id="application" class="application">
+    <section class="application" id="apply">
+        <div class="container">
 
-      <div class="container">
+            <h2>Interested?</h2>
 
-        <div class="application-grid">
-
-          <div class="application-copy">
-
-            <p class="eyebrow" style="color:#9FC3D8;">
-              TEACH WITH US
+            <p class="application-intro">
+                If you believe educators deserve better and you're
+                interested in joining Anderson Education, we'd love
+                to hear from you.
             </p>
 
-            <h2>Interested in teaching with us?</h2>
-
-            <p>
-              We're building our teaching network carefully. We're looking for educators who care about their students and want a flexible way to earn more from their experience.
-            </p>
-
-            <p>
-              <strong>Teaching experience matters more than having the perfect résumé.</strong>
-            </p>
-
-            <p>
-              Tell us a little about yourself and we'll reach out if there is a good fit.
-            </p>
-
-          </div>
-
-
-          <form class="application-form" action="#" method="POST">
-
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Your name"
-                required
-              >
-            </div>
-
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="you@example.com"
-                required
-              >
-            </div>
-
-
-            <div class="form-group">
-              <label for="location">Location</label>
-              <input
-                id="location"
-                name="location"
-                type="text"
-                placeholder="City / Country"
-              >
-            </div>
-
-
-            <div class="form-group">
-              <label for="experience">Teaching Experience</label>
-              <select id="experience" name="experience">
-
-                <option value="">Select one</option>
-                <option>Currently teaching</option>
-                <option>Retired educator</option>
-                <option>Substitute teacher</option>
-                <option>Former teacher</option>
-                <option>Other education experience</option>
-
-              </select>
-            </div>
-
-
-            <div class="form-group full">
-
-              <label for="subjects">
-                What can you teach?
-              </label>
-
-              <input
-                id="subjects"
-                name="subjects"
-                type="text"
-                placeholder="English, reading, writing, test preparation, etc."
-              >
-
-            </div>
-
-
-            <div class="form-group full">
-
-              <label for="availability">
-                Your Availability
-              </label>
-
-              <input
-                id="availability"
-                name="availability"
-                type="text"
-                placeholder="Example: Weekday evenings and Saturday mornings"
-              >
-
-            </div>
-
-
-            <div class="form-group full">
-
-              <label for="message">
-                Tell us about yourself
-              </label>
-
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Tell us about your teaching experience, students you've worked with, or anything else you'd like us to know."
-              ></textarea>
-
-            </div>
-
-
-            <button
-              type="submit"
-              class="submit-button"
+            <a
+                href="https://forms.gle/QFv65nujNR1P9Wjh9"
+                class="button"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-              Submit Application →
-            </button>
-
-
-            <p class="form-note">
-              We'll review your application and contact you if there is a potential fit.
-            </p>
-
-          </form>
+                Apply to Tutor
+            </a>
 
         </div>
-
-      </div>
-
     </section>
 
-  </main>
 
+    <!-- FOOTER -->
 
-  <!-- FOOTER -->
-
-  <footer>
-
-    <div class="container footer-content">
-
-      <div class="footer-brand">
-
-        <strong>ANDERSON EDUCATION</strong>
-
-        <p>
-          Better opportunities for educators.
-        </p>
-
-      </div>
-
-      <p>
-        © 2026 Anderson Education LLC. All rights reserved.
-      </p>
-
-    </div>
-
-  </footer>
+    <footer>
+        <p>© 2026 Anderson Education LLC. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
