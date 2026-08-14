@@ -3,1067 +3,446 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Anderson Education | Educator Opportunities</title>
-
-    <meta
-        name="description"
-        content="Anderson Education connects experienced educators with students around the world through flexible independent-contractor teaching opportunities."
-    >
+    <title>Anderson Education | Bridging Education Across Borders</title>
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
+            box-sizing: border-box;
         }
 
         body {
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Helvetica,
-                Arial,
-                sans-serif;
-
-            color: #172033;
-            background: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f7f8fa;
+            color: #17202a;
             line-height: 1.6;
         }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .container {
-            width: min(1080px, 90%);
-            margin: 0 auto;
-        }
-
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        nav {
-            height: 82px;
+        header {
+            width: 100%;
+            padding: 24px 7%;
             display: flex;
-            align-items: center;
-            background: #ffffff;
-            border-bottom: 1px solid #e7ebf1;
-        }
-
-        .nav-inner {
-            display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
+            background: white;
+            border-bottom: 1px solid #e8eaed;
         }
 
-        .brand img {
-            width: 145px;
-            height: auto;
-            display: block;
+        .logo {
+            height: 52px;
+            width: auto;
         }
 
-        .nav-button {
-            background: #172033;
-            color: #ffffff;
-            padding: 10px 19px;
+        .header-button {
+            text-decoration: none;
+            color: white;
+            background: #17202a;
+            padding: 11px 20px;
             border-radius: 7px;
+            font-weight: 600;
             font-size: 14px;
-            font-weight: 700;
-            transition: 0.2s ease;
         }
-
-        .nav-button:hover {
-            background: #2d3a52;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
 
         .hero {
-            padding: 95px 0 90px;
-            background:
-                linear-gradient(
-                    180deg,
-                    #f6f8fb 0%,
-                    #ffffff 100%
-                );
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 95px 7% 85px;
+            text-align: center;
         }
 
-        .hero-content {
-            max-width: 820px;
+        .quote {
+            font-size: 18px;
+            color: #69737d;
+            font-style: italic;
+            margin-bottom: 45px;
         }
 
-        .eyebrow {
-            color: #53627a;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
-            margin-bottom: 18px;
+        .quote strong {
+            display: block;
+            font-size: 14px;
+            font-style: normal;
+            margin-top: 8px;
+            color: #17202a;
         }
 
         h1 {
-            font-size: clamp(44px, 7vw, 72px);
-            line-height: 1.02;
-            letter-spacing: -3px;
-            color: #111827;
-            margin-bottom: 25px;
-        }
-
-        h1 span {
-            color: #285a9f;
-        }
-
-        .hero-text {
-            max-width: 720px;
-            font-size: 21px;
-            line-height: 1.6;
-            color: #596578;
-            margin-bottom: 32px;
-        }
-
-        .primary-button {
-            display: inline-block;
-            background: #285a9f;
-            color: #ffffff;
-            padding: 15px 25px;
-            border-radius: 8px;
-            font-size: 16px;
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 28px;
             font-weight: 750;
-            transition: 0.2s ease;
         }
 
-        .primary-button:hover {
-            background: #204a85;
-            transform: translateY(-1px);
+        .hero p {
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: 20px;
+            color: #59636e;
         }
 
-        .secondary-link {
-            display: inline-block;
-            margin-left: 20px;
-            color: #285a9f;
-            font-weight: 700;
+        .mission {
+            background: white;
+            padding: 80px 7%;
+            border-top: 1px solid #e8eaed;
+            border-bottom: 1px solid #e8eaed;
         }
 
-
-        /* =========================
-           GENERAL SECTIONS
-        ========================= */
-
-        section {
-            padding: 75px 0;
+        .mission-inner {
+            max-width: 950px;
+            margin: 0 auto;
         }
 
         .section-label {
-            color: #657187;
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 1.7px;
             text-transform: uppercase;
-            margin-bottom: 12px;
+            letter-spacing: 2px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #69737d;
+            margin-bottom: 16px;
         }
 
         h2 {
-            color: #111827;
-            font-size: clamp(31px, 4vw, 44px);
+            font-size: clamp(32px, 4vw, 48px);
             line-height: 1.15;
-            letter-spacing: -1.5px;
+            letter-spacing: -1px;
+            margin-bottom: 25px;
+        }
+
+        .mission p {
+            font-size: 18px;
+            color: #59636e;
+            max-width: 820px;
             margin-bottom: 20px;
         }
 
-        .section-intro {
-            max-width: 720px;
-            color: #5e697a;
+        .bridge {
+            padding: 85px 7%;
+            background: #17202a;
+            color: white;
+        }
+
+        .bridge-inner {
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        .bridge .section-label {
+            color: #b8c0c8;
+        }
+
+        .bridge h2 {
+            max-width: 750px;
+        }
+
+        .bridge-text {
+            color: #cbd1d7;
             font-size: 18px;
+            max-width: 760px;
+            margin-bottom: 45px;
         }
 
-
-        /* =========================
-           MISSION
-        ========================= */
-
-        .mission {
-            border-bottom: 1px solid #e7ebf1;
-        }
-
-        .mission-grid {
+        .bridge-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 65px;
-            align-items: center;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 18px;
         }
 
-        .mission-text {
-            color: #596578;
-            font-size: 18px;
-        }
-
-        .mission-text p + p {
-            margin-top: 18px;
-        }
-
-        .mission-statement {
-            border-left: 4px solid #285a9f;
-            padding-left: 28px;
-            color: #172033;
-            font-size: 25px;
-            line-height: 1.4;
-            font-weight: 700;
-        }
-
-
-        /* =========================
-           PROBLEM
-        ========================= */
-
-        .problem {
-            background: #f6f8fb;
-        }
-
-        .problem-content {
-            max-width: 800px;
-        }
-
-        .problem-content p {
-            color: #596578;
-            font-size: 19px;
-            margin-bottom: 20px;
-        }
-
-        .problem-content strong {
-            color: #172033;
-        }
-
-
-        /* =========================
-           PAY
-        ========================= */
-
-        .pay-section {
-            background: #ffffff;
-        }
-
-        .pay-header {
-            margin-bottom: 35px;
-        }
-
-        .pay-table {
-            max-width: 800px;
-            border: 1px solid #dfe4ec;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(20, 35, 55, 0.05);
-        }
-
-        .pay-row {
-            display: grid;
-            grid-template-columns: 1fr 190px;
-            align-items: center;
-            padding: 21px 25px;
-            background: #ffffff;
-            border-bottom: 1px solid #e6eaf0;
-        }
-
-        .pay-row:last-child {
-            border-bottom: none;
-        }
-
-        .pay-row.highlight {
-            background: #eef4fc;
-        }
-
-        .pay-title {
-            color: #273247;
-            font-weight: 700;
-        }
-
-        .pay-source {
-            display: block;
-            color: #7b8493;
-            font-size: 12px;
-            margin-top: 2px;
-        }
-
-        .pay-amount {
-            color: #172033;
-            font-size: 22px;
-            font-weight: 800;
-            text-align: right;
-        }
-
-        .pay-row.highlight .pay-amount {
-            color: #285a9f;
-        }
-
-        .pay-note {
-            max-width: 800px;
-            color: #7b8493;
-            font-size: 13px;
-            margin-top: 15px;
-        }
-
-
-        /* =========================
-           HOW IT WORKS
-        ========================= */
-
-        .how {
-            background: #f6f8fb;
-        }
-
-        .how-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-            margin-top: 38px;
-        }
-
-        .how-card {
-            padding: 28px;
-            background: #ffffff;
-            border: 1px solid #e1e6ed;
+        .bridge-card {
+            border: 1px solid #39444e;
             border-radius: 10px;
+            padding: 28px;
+            background: #202b35;
         }
 
-        .how-number {
-            color: #285a9f;
-            font-size: 12px;
-            font-weight: 900;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-
-        .how-card h3 {
-            color: #172033;
+        .bridge-card h3 {
             font-size: 20px;
             margin-bottom: 10px;
         }
 
-        .how-card p {
-            color: #657083;
+        .bridge-card p {
+            color: #b8c0c8;
             font-size: 15px;
         }
 
-
-        /* =========================
-           CONTRACTOR
-        ========================= */
-
-        .contractor {
-            background: #172033;
-            color: #ffffff;
+        .educators {
+            background: #f7f8fa;
+            padding: 85px 7%;
         }
 
-        .contractor h2 {
-            color: #ffffff;
+        .educators-inner {
+            max-width: 950px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .contractor .section-label {
-            color: #aab7ca;
+        .educators h2 {
+            margin-bottom: 20px;
         }
 
-        .contractor-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 55px;
-            align-items: center;
-        }
-
-        .contractor-text {
-            color: #c8d0dc;
+        .educators p {
+            max-width: 720px;
+            margin: 0 auto 35px;
+            color: #59636e;
             font-size: 18px;
-        }
-
-        .contractor-text p + p {
-            margin-top: 18px;
         }
 
         .benefits {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            text-align: left;
+            margin-bottom: 40px;
         }
 
         .benefit {
-            padding: 17px;
-            color: #e5e9ef;
-            background: #1d2739;
-            border: 1px solid #354055;
-            border-radius: 8px;
+            background: white;
+            border: 1px solid #e2e5e8;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .benefit h3 {
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .benefit p {
             font-size: 15px;
-            font-weight: 650;
+            margin: 0;
         }
 
-
-        /* =========================
-           APPLICATION
-        ========================= */
-
-        .apply {
-            padding: 90px 0;
-            text-align: center;
+        .cta {
+            display: inline-block;
+            background: #17202a;
+            color: white;
+            text-decoration: none;
+            padding: 16px 28px;
+            border-radius: 7px;
+            font-weight: 700;
+            transition: transform 0.15s ease, opacity 0.15s ease;
         }
 
-        .apply-content {
-            max-width: 720px;
-            margin: 0 auto;
+        .cta:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
         }
-
-        .apply-content p {
-            color: #5e697a;
-            font-size: 19px;
-            margin-bottom: 30px;
-        }
-
-        .apply-note {
-            color: #818a99 !important;
-            font-size: 13px !important;
-            margin-top: 18px;
-            margin-bottom: 0 !important;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
 
         footer {
-            padding: 30px 0;
-            color: #7b8493;
+            background: white;
+            border-top: 1px solid #e8eaed;
+            padding: 28px 7%;
+            text-align: center;
+            color: #7a838c;
             font-size: 13px;
-            border-top: 1px solid #e5e9ef;
         }
-
-        .footer-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .footer-brand img {
-            width: 125px;
-            height: auto;
-            display: block;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
 
         @media (max-width: 750px) {
-
-            nav {
-                height: 70px;
+            header {
+                padding: 18px 5%;
             }
 
-            .brand img {
-                width: 125px;
+            .logo {
+                height: 42px;
             }
 
-            .nav-button {
+            .header-button {
                 padding: 9px 14px;
                 font-size: 13px;
             }
 
             .hero {
-                padding: 65px 0;
+                padding: 70px 6% 65px;
             }
 
-            h1 {
-                letter-spacing: -2px;
-            }
-
-            .hero-text {
+            .hero p {
                 font-size: 18px;
             }
 
-            .secondary-link {
-                display: block;
-                margin: 17px 0 0;
+            .mission,
+            .bridge,
+            .educators {
+                padding: 65px 6%;
             }
 
-            section {
-                padding: 60px 0;
-            }
-
-            .mission-grid,
-            .contractor-grid {
-                grid-template-columns: 1fr;
-                gap: 35px;
-            }
-
-            .how-grid {
-                grid-template-columns: 1fr;
-            }
-
+            .bridge-grid,
             .benefits {
                 grid-template-columns: 1fr;
             }
 
-            .pay-row {
-                grid-template-columns: 1fr auto;
-                gap: 15px;
-                padding: 18px;
-            }
-
-            .pay-amount {
-                font-size: 19px;
-            }
-
-            .footer-inner {
-                flex-direction: column;
-                gap: 12px;
-                text-align: center;
-            }
-
-            .footer-brand img {
-                margin: 0 auto;
+            h1 {
+                letter-spacing: -1px;
             }
         }
     </style>
 </head>
 
-
 <body>
 
+<header>
+    <!-- Replace this filename with the exact filename of your logo in GitHub -->
+    <img src="Anderson Education Metallic Logo.png"
+         alt="Anderson Education"
+         class="logo">
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
-
-    <nav>
-        <div class="container nav-inner">
-
-            <a href="#" class="brand">
-                <img
-                    src="assets/anderson-education-logo.png"
-                    alt="Anderson Education LLC"
-                >
-            </a>
-
-            <a href="#apply" class="nav-button">
-                Become an Educator
-            </a>
-
-        </div>
-    </nav>
+    <a href="https://forms.gle/QFv65nujNR1P9Wjh9"
+       class="header-button"
+       target="_blank">
+        Become an Educator
+    </a>
+</header>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+<section class="hero">
 
-    <header class="hero">
+    <div class="quote">
+        “Education is the most powerful weapon which you can use to change the world.”
+        <strong>— Nelson Mandela</strong>
+    </div>
 
-        <div class="container">
+    <h1>Bridging education across borders.</h1>
 
-            <div class="hero-content">
+    <p>
+        Anderson Education connects great English educators with students
+        around the world who may not otherwise have access to native
+        English-speaking teachers.
+    </p>
 
-                <div class="eyebrow">
-                    For educators who want more
-                </div>
-
-                <h1>
-                    Your experience is worth <span>more.</span>
-                </h1>
-
-                <p class="hero-text">
-                    A flexible way for educators to earn additional income
-                    from the skills they already have — without leaving the
-                    job they already have.
-                </p>
-
-                <a
-                    href="#apply"
-                    class="primary-button"
-                >
-                    Apply to Become an Educator
-                </a>
-
-                <a
-                    href="#mission"
-                    class="secondary-link"
-                >
-                    Learn about our mission ↓
-                </a>
-
-            </div>
-
-        </div>
-
-    </header>
+</section>
 
 
-    <!-- =========================
-         MISSION
-    ========================== -->
+<section class="mission">
 
-    <section
-        class="mission"
-        id="mission"
-    >
+    <div class="mission-inner">
 
-        <div class="container">
+        <div class="section-label">Our Mission</div>
 
-            <div class="mission-grid">
+        <h2>Great educators shouldn't be limited by geography.</h2>
 
-                <div>
+        <p>
+            There are students around the world who want to learn English
+            from native English speakers, but don't always have access to
+            the right teachers.
+        </p>
 
-                    <div class="section-label">
-                        Our mission
-                    </div>
+        <p>
+            At the same time, there are experienced educators with the
+            knowledge, patience, and passion to teach who may be looking
+            for flexible opportunities to continue doing what they love.
+        </p>
 
-                    <h2>
-                        Better opportunities for people who already know how to teach.
-                    </h2>
+        <p>
+            Anderson Education exists to bring these two groups together.
+        </p>
 
-                    <div class="mission-text">
+    </div>
 
-                        <p>
-                            Educators spend years developing the ability to
-                            teach, communicate, encourage, and connect with
-                            students.
-                        </p>
-
-                        <p>
-                            Anderson Education exists to help educators put
-                            those skills to work in a flexible way that fits
-                            around their lives.
-                        </p>
-
-                    </div>
-
-                </div>
+</section>
 
 
-                <div class="mission-statement">
+<section class="bridge">
 
-                    We believe experienced educators should have better
-                    opportunities to earn from the work they already know
-                    how to do.
+    <div class="bridge-inner">
 
-                </div>
+        <div class="section-label">The Connection</div>
 
-            </div>
+        <h2>Two worlds. One classroom.</h2>
 
-        </div>
+        <p class="bridge-text">
+            Technology makes it possible for a teacher in one part of the
+            world to sit down and teach a student thousands of miles away.
+            We believe that connection can create opportunities for both.
+        </p>
 
-    </section>
+        <div class="bridge-grid">
 
-
-    <!-- =========================
-         THE PROBLEM
-    ========================== -->
-
-    <section class="problem">
-
-        <div class="container">
-
-            <div class="problem-content">
-
-                <div class="section-label">
-                    Why we're building this
-                </div>
-
-                <h2>
-                    Education takes more than the hours on the clock.
-                </h2>
-
+            <div class="bridge-card">
+                <h3>For educators</h3>
                 <p>
-                    Educators often spend significant time preparing lessons,
-                    grading, communicating with students and parents, and
-                    handling work outside of their scheduled hours.
+                    Share your experience and teaching skills with students
+                    who genuinely want to learn.
                 </p>
+            </div>
 
+            <div class="bridge-card">
+                <h3>For students</h3>
                 <p>
-                    <strong>
-                        The responsibility is enormous, but the value placed
-                        on that experience does not always reflect it.
-                    </strong>
+                    Gain access to qualified native English-speaking educators
+                    and personalized instruction.
                 </p>
+            </div>
 
+            <div class="bridge-card">
+                <h3>Across borders</h3>
                 <p>
-                    We want to create another option for educators who want
-                    to earn additional income without taking on another
-                    traditional job.
+                    Build meaningful educational connections that would
+                    otherwise be difficult to make.
                 </p>
-
             </div>
 
         </div>
 
-    </section>
+    </div>
 
+</section>
 
-    <!-- =========================
-         PAY
-    ========================== -->
 
-    <section class="pay-section">
+<section class="educators">
 
-        <div class="container">
+    <div class="educators-inner">
 
-            <div class="pay-header">
+        <div class="section-label">Join Us</div>
 
-                <div class="section-label">
-                    The opportunity
-                </div>
+        <h2>Help us bridge the gap.</h2>
 
-                <h2>
-                    Your time has value.
-                </h2>
+        <p>
+            Anderson Education educators work as independent contractors,
+            allowing them to teach without having to leave their current
+            jobs or careers.
+        </p>
 
-                <p class="section-intro">
-                    Anderson Education offers educators
-                    <strong>$24–$30 per teaching hour</strong>
-                    as independent contractors.
-                </p>
+        <div class="benefits">
 
-            </div>
-
-
-            <div class="pay-table">
-
-
-                <div class="pay-row">
-
-                    <div>
-
-                        <div class="pay-title">
-                            Public-school teachers
-                        </div>
-
-                        <span class="pay-source">
-                            U.S. median hourly equivalent*
-                        </span>
-
-                    </div>
-
-                    <div class="pay-amount">
-                        ~$30–$32/hr
-                    </div>
-
-                </div>
-
-
-                <div class="pay-row">
-
-                    <div>
-
-                        <div class="pay-title">
-                            Public-school substitute teachers
-                        </div>
-
-                        <span class="pay-source">
-                            U.S. median hourly wage
-                        </span>
-
-                    </div>
-
-                    <div class="pay-amount">
-                        $18.38/hr
-                    </div>
-
-                </div>
-
-
-                <div class="pay-row highlight">
-
-                    <div>
-
-                        <div class="pay-title">
-                            Anderson Education
-                        </div>
-
-                        <span class="pay-source">
-                            Independent-contractor teaching rate
-                        </span>
-
-                    </div>
-
-                    <div class="pay-amount">
-                        $24–$30/hr
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-            <p class="pay-note">
-                *Teacher figures are based on May 2024 U.S. Bureau of Labor
-                Statistics median annual wages for public-school teachers
-                by grade level, converted to an hourly equivalent using
-                2,080 hours. Substitute-teacher figure is the May 2023
-                BLS median hourly wage for short-term substitute teachers
-                in local-government-owned elementary and secondary schools.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         HOW IT WORKS
-    ========================== -->
-
-    <section class="how">
-
-        <div class="container">
-
-            <div class="section-label">
-                How it works
-            </div>
-
-            <h2>
-                You teach. We handle the rest.
-            </h2>
-
-            <p class="section-intro">
-                We are building the infrastructure so educators can focus
-                on what they actually enjoy: teaching.
-            </p>
-
-
-            <div class="how-grid">
-
-
-                <div class="how-card">
-
-                    <div class="how-number">
-                        01
-                    </div>
-
-                    <h3>
-                        We find the students
-                    </h3>
-
-                    <p>
-                        We market Anderson Education and connect educators
-                        with students from around the world.
-                    </p>
-
-                </div>
-
-
-                <div class="how-card">
-
-                    <div class="how-number">
-                        02
-                    </div>
-
-                    <h3>
-                        We handle scheduling
-                    </h3>
-
-                    <p>
-                        You do not have to spend your time finding students,
-                        coordinating schedules, or managing leads.
-                    </p>
-
-                </div>
-
-
-                <div class="how-card">
-
-                    <div class="how-number">
-                        03
-                    </div>
-
-                    <h3>
-                        We prepare you
-                    </h3>
-
-                    <p>
-                        We provide student-specific information and teaching
-                        resources so you know who you are teaching and what
-                        they need.
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         INDEPENDENT CONTRACTOR
-    ========================== -->
-
-    <section class="contractor">
-
-        <div class="container">
-
-            <div class="contractor-grid">
-
-
-                <div>
-
-                    <div class="section-label">
-                        Built around your life
-                    </div>
-
-                    <h2>
-                        This does not have to replace your current job.
-                    </h2>
-
-                    <div class="contractor-text">
-
-                        <p>
-                            Anderson Education educators work as
-                            independent contractors. You can continue
-                            teaching, working, studying, or enjoying
-                            retirement while using your available time
-                            to earn additional income.
-                        </p>
-
-                        <p>
-                            Choose the availability that works for you.
-                            We take care of finding students and organizing
-                            the teaching side of the business.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="benefits">
-
-                    <div class="benefit">
-                        $24–$30 per teaching hour
-                    </div>
-
-                    <div class="benefit">
-                        Independent contractor
-                    </div>
-
-                    <div class="benefit">
-                        Work from home
-                    </div>
-
-                    <div class="benefit">
-                        Flexible availability
-                    </div>
-
-                    <div class="benefit">
-                        Students from around the world
-                    </div>
-
-                    <div class="benefit">
-                        We find the students
-                    </div>
-
-                    <div class="benefit">
-                        We handle scheduling
-                    </div>
-
-                    <div class="benefit">
-                        Student-specific resources
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         APPLICATION
-    ========================== -->
-
-    <section
-        class="apply"
-        id="apply"
-    >
-
-        <div class="container">
-
-            <div class="apply-content">
-
-                <div class="section-label">
-                    Join Anderson Education
-                </div>
-
-                <h2>
-                    Interested in teaching with us?
-                </h2>
-
+            <div class="benefit">
+                <h3>We find the students</h3>
                 <p>
-                    Tell us about yourself, your teaching experience,
-                    what you can teach, and when you're available.
-                    If it looks like a good fit, we'll be in touch.
+                    Our team handles marketing and student recruitment
+                    around the world.
                 </p>
+            </div>
 
-                <a
-                    href="https://forms.gle/QFv65nujNR1P9Wjh9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="primary-button"
-                >
-                    Apply to Become an Educator →
-                </a>
-
-                <p class="apply-note">
-                    Applications are reviewed individually.
-                    Teaching positions are independent-contractor
-                    opportunities.
+            <div class="benefit">
+                <h3>We handle scheduling</h3>
+                <p>
+                    We coordinate students and lessons so you can focus
+                    on teaching.
                 </p>
+            </div>
 
+            <div class="benefit">
+                <h3>Resources for every student</h3>
+                <p>
+                    We provide resources and student information to help
+                    you prepare for the people you teach.
+                </p>
             </div>
 
         </div>
 
-    </section>
+        <a href="https://forms.gle/QFv65nujNR1P9Wjh9"
+           class="cta"
+           target="_blank">
+            Become an Anderson Education Educator →
+        </a>
+
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <div class="container footer-inner">
-
-            <div class="footer-brand">
-
-                <img
-                    src="assets/anderson-education-logo.png"
-                    alt="Anderson Education LLC"
-                >
-
-            </div>
-
-            <div>
-                © 2026 Anderson Education LLC. All rights reserved.
-            </div>
-
-        </div>
-
-    </footer>
-
+<footer>
+    © 2026 Anderson Education LLC. All rights reserved.
+</footer>
 
 </body>
 </html>
