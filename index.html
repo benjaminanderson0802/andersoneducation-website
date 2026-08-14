@@ -18,7 +18,8 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Arial, sans-serif;
             color: #1f2937;
             background: #ffffff;
             line-height: 1.6;
@@ -30,8 +31,6 @@
             margin: 0 auto;
         }
 
-        /* HEADER */
-
         header {
             padding: 26px 0;
             border-bottom: 1px solid #e5e7eb;
@@ -40,7 +39,6 @@
         .logo {
             font-size: 20px;
             font-weight: 700;
-            letter-spacing: -0.3px;
             color: #111827;
         }
 
@@ -86,106 +84,176 @@
             background: #1d4ed8;
         }
 
-        /* MISSION */
+        /* THE PROBLEM */
 
-        .mission {
+        .problem {
             background: #f8fafc;
-            padding: 60px 20px;
+            padding: 65px 20px;
         }
 
-        .mission h2 {
+        .problem h2 {
+            font-size: 34px;
+            line-height: 1.2;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+
+        .problem p {
+            font-size: 18px;
+            color: #4b5563;
+            max-width: 720px;
+            margin-bottom: 18px;
+        }
+
+        /* PAY COMPARISON */
+
+        .comparison {
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .comparison h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .comparison-intro {
+            color: #6b7280;
+            max-width: 650px;
+            margin: 0 auto 35px;
+            font-size: 17px;
+        }
+
+        .pay-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .pay-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 25px 20px;
+            background: #ffffff;
+        }
+
+        .pay-card.highlight {
+            border: 2px solid #2563eb;
+        }
+
+        .pay-card h3 {
+            font-size: 17px;
+            color: #374151;
+            margin-bottom: 10px;
+        }
+
+        .pay-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2563eb;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .pay-card p {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .source {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        /* OPPORTUNITY */
+
+        .opportunity {
+            background: #f8fafc;
+            padding: 65px 20px;
+        }
+
+        .opportunity h2 {
             font-size: 34px;
             line-height: 1.2;
             color: #111827;
             margin-bottom: 18px;
         }
 
-        .mission p {
+        .opportunity p {
             font-size: 18px;
             color: #4b5563;
-            max-width: 700px;
+            max-width: 720px;
+            margin-bottom: 18px;
         }
 
-        .mission p + p {
-            margin-top: 20px;
-        }
-
-        /* PAY */
-
-        .pay {
-            padding: 65px 20px;
-            text-align: center;
-        }
-
-        .pay h2 {
-            font-size: 32px;
-            line-height: 1.2;
-            margin-bottom: 8px;
-            color: #111827;
-        }
-
-        .pay-number {
-            font-size: 52px;
-            line-height: 1.2;
+        .rate {
+            font-size: 48px;
             font-weight: 700;
             color: #2563eb;
-            margin: 12px 0;
+            margin: 25px 0 10px;
         }
 
-        .pay p {
-            color: #6b7280;
-            max-width: 600px;
-            margin: 0 auto;
-            font-size: 17px;
-        }
-
-        /* WHO WE'RE LOOKING FOR */
+        /* WHO */
 
         .who {
-            padding: 15px 20px 70px;
+            padding: 60px 20px;
         }
 
         .who h2 {
             font-size: 32px;
             line-height: 1.2;
-            margin-bottom: 20px;
             color: #111827;
+            margin-bottom: 18px;
         }
 
         .who p {
             font-size: 18px;
             color: #4b5563;
-            max-width: 700px;
-            margin-bottom: 15px;
+            max-width: 720px;
+            margin-bottom: 16px;
         }
 
         /* APPLICATION */
 
         .application {
-            background: #f8fafc;
-            padding: 65px 20px;
+            background: #111827;
+            color: white;
+            padding: 70px 20px;
             text-align: center;
         }
 
         .application h2 {
-            font-size: 36px;
+            font-size: 38px;
             line-height: 1.2;
-            color: #111827;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
-        .application-intro {
-            color: #6b7280;
-            margin: 0 auto 28px;
-            font-size: 17px;
+        .application p {
             max-width: 600px;
+            margin: 0 auto 28px;
+            color: #d1d5db;
+            font-size: 18px;
+        }
+
+        .application .button {
+            background: #ffffff;
+            color: #111827;
+        }
+
+        .application .button:hover {
+            background: #e5e7eb;
         }
 
         /* FOOTER */
 
         footer {
             text-align: center;
-            padding: 30px 20px;
+            padding: 28px 20px;
             color: #6b7280;
             font-size: 14px;
         }
@@ -206,22 +274,28 @@
                 font-size: 18px;
             }
 
-            .mission,
-            .pay,
+            .problem,
+            .comparison,
+            .opportunity,
+            .who,
             .application {
                 padding-top: 50px;
                 padding-bottom: 50px;
             }
 
-            .mission h2,
+            .problem h2,
+            .opportunity h2,
             .who h2,
-            .pay h2,
-            .application h2 {
+            .comparison h2 {
                 font-size: 29px;
             }
 
-            .pay-number {
-                font-size: 43px;
+            .pay-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rate {
+                font-size: 42px;
             }
         }
     </style>
@@ -244,14 +318,13 @@
         <div class="container">
 
             <h1>
-                Let's be honest.<br>
-                <span>Educators deserve better.</span>
+                Educators<br>
+                <span>deserve better.</span>
             </h1>
 
             <p>
-                Anderson Education connects great educators with
-                flexible online tutoring work that respects their
-                experience, time, and value.
+                We believe the experience, knowledge, and time educators
+                give to students should be valued accordingly.
             </p>
 
             <a
@@ -267,48 +340,109 @@
     </section>
 
 
-    <!-- MISSION -->
+    <!-- THE PROBLEM -->
 
-    <section class="mission">
+    <section class="problem">
         <div class="container">
 
-            <h2>Teaching should be worth more.</h2>
+            <h2>
+                Education asks a lot from the people who make it work.
+            </h2>
 
             <p>
-                Educators spend years building skills that are incredibly
-                valuable, yet many are asked to work for less than their
-                experience is worth.
+                Teachers regularly spend time outside the classroom preparing
+                lessons, grading work, answering messages, communicating with
+                parents, and supporting their students.
             </p>
 
             <p>
-                Substitute teaching and other part-time education work
-                often do not provide the flexibility or income educators
-                need.
+                Much of that work happens outside the hours they are officially
+                paid for. Yet teaching remains one of the most important jobs
+                in our communities.
             </p>
 
             <p>
-                We are building a different option. Anderson Education
-                gives qualified educators the opportunity to earn
-                additional income through one-on-one online English
-                tutoring.
+                We think educators should have more opportunities to earn from
+                the skills they have spent years developing.
             </p>
 
         </div>
     </section>
 
 
-    <!-- PAY -->
+    <!-- PAY COMPARISON -->
 
-    <section class="pay">
+    <section class="comparison">
         <div class="container">
 
-            <h2>Earn $24–$30 per hour.</h2>
+            <h2>What does the market pay?</h2>
 
-            <div class="pay-number">$24–$30/hr</div>
+            <p class="comparison-intro">
+                National median wage data shows a significant difference
+                between substitute teaching and the opportunity we offer.
+            </p>
+
+            <div class="pay-grid">
+
+                <div class="pay-card">
+                    <h3>Short-Term Substitute Teacher</h3>
+
+                    <div class="pay-number">
+                        $20.03/hr
+                    </div>
+
+                    <p>
+                        U.S. median hourly wage, May 2025
+                    </p>
+                </div>
+
+
+                <div class="pay-card highlight">
+                    <h3>Anderson Education</h3>
+
+                    <div class="pay-number">
+                        $24–$30/hr
+                    </div>
+
+                    <p>
+                        Tutoring opportunities with Anderson Education
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="source">
+                Substitute teacher wage: U.S. Bureau of Labor Statistics,
+                May 2025 Occupational Employment and Wage Statistics.
+                Regular public-school teachers are generally reported by
+                BLS using annual salary rather than hourly median wage.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- OPPORTUNITY -->
+
+    <section class="opportunity">
+        <div class="container">
+
+            <h2>
+                A flexible way to earn from the skills you already have.
+            </h2>
 
             <p>
-                Flexible online tutoring designed to fit around your
-                existing work, retirement, family, or other commitments.
+                Anderson Education connects qualified educators with
+                one-on-one online English tutoring students.
+            </p>
+
+            <div class="rate">
+                $24–$30/hr
+            </div>
+
+            <p>
+                Work can fit around your existing schedule rather than
+                requiring you to take on another full-time job.
             </p>
 
         </div>
@@ -323,21 +457,15 @@
             <h2>Who we're looking for</h2>
 
             <p>
-                We're looking for educators who enjoy working with
-                students and want a flexible way to earn additional income.
-            </p>
-
-            <p>
                 Current teachers, retired educators, substitute teachers,
                 education students, and experienced professionals with
-                strong English communication skills are all encouraged
-                to apply.
+                strong English communication skills are encouraged to apply.
             </p>
 
             <p>
                 You don't need to leave your current job. You don't need
-                to work full-time. We simply want great people who care
-                about helping students learn.
+                to work full-time. We're looking for people who know how
+                to teach and genuinely enjoy helping students learn.
             </p>
 
         </div>
@@ -346,15 +474,14 @@
 
     <!-- APPLICATION -->
 
-    <section class="application" id="apply">
+    <section class="application">
         <div class="container">
 
             <h2>Interested?</h2>
 
-            <p class="application-intro">
-                If you believe educators deserve better and you're
-                interested in joining Anderson Education, we'd love
-                to hear from you.
+            <p>
+                If you believe educators deserve better and want to explore
+                tutoring with Anderson Education, we'd love to hear from you.
             </p>
 
             <a
@@ -373,7 +500,9 @@
     <!-- FOOTER -->
 
     <footer>
-        <p>© 2026 Anderson Education LLC. All rights reserved.</p>
+        <p>
+            © 2026 Anderson Education LLC. All rights reserved.
+        </p>
     </footer>
 
 </body>
